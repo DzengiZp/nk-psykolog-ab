@@ -1,15 +1,36 @@
 :root {
-    --header-black: black;
+    /* Color palettes for whole website */
+    --color-palette-one: #F9F8F6;
+    --color-palette-two: #EFE9E3;
+    --color-palette-three: #D9CFC7;
+    --color-palette-four: #C9B59C;
+
+    /* Text colors */
+    --text-black: #303030;
+
+    /* Rem size */
+    
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: blueviolet;
+    background-color: antiquewhite;
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
     margin: 0;
     padding: 0;
 }
