@@ -6,9 +6,8 @@ import { schemaTypes } from './schemaTypes'
 export default defineConfig({
     name: 'default',
     title: 'nk-psykolog-ab',
-
-    projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
-    dataset: import.meta.env.VITE_SANITY_DATASET,
+    projectId: import.meta.env.SANITY_STUDIO_PROJECT_ID,
+    dataset: import.meta.env.SANITY_STUDIO_DATASET,
 
     plugins: [structureTool(), visionTool()],
 
