@@ -1,0 +1,106 @@
+.formWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 200px;
+  gap: 2rem;
+}
+
+.formParagraph {
+  margin-bottom: 5rem;
+}
+
+.firstNameWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem 0 10rem;
+}
+
+.firstNameLabel {
+}
+
+.firstNameInput {
+  font-family: 'Quicksand';
+  width: 250px;
+}
+
+.lastNameWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem 0 10rem;
+}
+
+.lastNameLabel {
+}
+
+.lastNameInput {
+  font-family: 'Quicksand';
+  width: 250px;
+}
+
+.emailWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0 10rem 0 10rem;
+}
+
+.emailLabel {
+}
+
+.emailInput {
+  font-family: 'Quicksand';
+  width: 250px;
+}
+
+.firstNameInput::placeholder,
+.lastNameInput::placeholder,
+.emailInput::placeholder {
+  padding-left: 0.5rem;
+}
+
+.messageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.messageLabel {
+  /* text-align: center; */
+  margin-bottom: 1rem;
+}
+
+.messageInput {
+  height: 100px;
+  font-family: 'Quicksand';
+}
+
+.messageInput::placeholder {
+  font-size: 2.4rem;
+  padding: 1rem;
+}
+
+textarea::-webkit-resizer {
+  display: none;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.formButton {
+  height: 50px;
+  font-size: 2.4rem;
+  font-family: 'Quicksand';
+  width: 75%;
+  border-radius: 6px;
+  border: 0.5px solid #303030;
+  cursor: pointer;
+}
