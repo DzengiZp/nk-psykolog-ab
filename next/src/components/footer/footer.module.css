@@ -1,8 +1,9 @@
-.footerColor {
-    background-color: var(--color-palette-two);
+.footerContainer {
+    background-color: var(--color-palette-four);
     text-align: center;
     font-size: 2rem;
     padding: 20px;
+    margin-top: auto;
 }
 
 .copyrightNotice {
