@@ -1,0 +1,43 @@
+.startPageContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10rem;
+}
+
+.heroImageContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/1;
+  /* padding: 0 2rem 0 2rem; */
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  position: absolute;
+  padding-top: 180px;
+  color: white;
+  z-index: 10;
+  font-size: clamp(2rem, 3vw + 1rem, 10rem);
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  font-size: 2.6rem;
+  padding: 2rem 10rem 2rem 10rem;
+}
+
+.formContainer {
+  /* display: flex; */
+  /* justify-content: start; */
+  gap: 2rem;
+  font-size: 2.6rem;
+  /* padding: 1rem 5rem 1rem 5rem; */
+}
