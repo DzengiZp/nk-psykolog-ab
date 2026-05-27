@@ -1,0 +1,42 @@
+:root {
+  /* Color palettes for whole website */
+  --color-palette-one: #f9f8f6;
+  --color-palette-two: #efe9e3;
+  --color-palette-three: #d9cfc7;
+  --color-palette-four: #c9b59c;
+
+  /* Text colors */
+  --text-black: #303030;
+
+  /* Rem size */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  min-height: 100vh;
+  background-color: var(--color-palette-two);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
