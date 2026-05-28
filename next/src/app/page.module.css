@@ -1,43 +1,59 @@
 .startPageContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10rem;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.startPageContainer > section:nth-child(2) > div {
+  border-top: none;
 }
 
 .heroImageContainer {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  aspect-ratio: 2/1;
-  /* padding: 0 2rem 0 2rem; */
-  margin-bottom: 1rem;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	aspect-ratio: 2.5/1;
+	margin-bottom: 1rem;
+  margin-top: 5rem;
 }
 
 .heroTitle {
-  position: absolute;
-  padding-top: 180px;
-  color: white;
-  z-index: 10;
-  font-size: clamp(2rem, 3vw + 1rem, 10rem);
+	position: absolute;
+	padding-top: 180px;
+	color: var(--text-black);
+	z-index: 10;
+	font-size: clamp(2rem, 2vw + 1rem, 10rem);
 }
 
 .heroImage {
-  object-fit: cover;
+	object-fit: cover;
+  border-radius: 4px;
+
 }
 
 .aboutContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  font-size: 2.6rem;
-  padding: 2rem 10rem 2rem 10rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	color: var(--text-black);
+	gap: 2rem;
+	font-size: 2.6rem;
+}
+
+.firstTalkContainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	color: var(--text-black);
+	gap: 2rem;
+	font-size: 2.6rem;
+	padding: 3rem 0;
+}
+
+.firstTalkContainer > div {
+	border-bottom: 2px solid var(--color-palette-two);
 }
 
 .formContainer {
-  /* display: flex; */
-  /* justify-content: start; */
-  gap: 2rem;
-  font-size: 2.6rem;
-  /* padding: 1rem 5rem 1rem 5rem; */
+	color: var(--text-black);
+	gap: 2rem;
+	font-size: 2.6rem;
 }

@@ -5,32 +5,34 @@ import type { Metadata } from 'next';
 import { Inter, Quicksand } from 'next/font/google';
 
 export const metadata: Metadata = {
-  title: 'NK Psykolog AB',
-  description: 'Officiella hemsidan för Nathalie Korhonen Psykolog AB',
+	title: 'NK Psykolog AB',
+	description: 'Officiella hemsidan för Nathalie Korhonen Psykolog AB',
 };
 
 const inter = Inter({
-  subsets: ['latin'],
+	subsets: ['latin'],
 });
 
 const quicksand = Quicksand({
-  subsets: ['latin'],
+	subsets: ['latin'],
 });
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html
-      lang='en'
-      className={quicksand.className}>
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
+	return (
+		<html
+			lang='en'
+			className={quicksand.className}>
+			<body>
+				<div className='baseSite'>
+					<Header />
+					<main>{children}</main>
+					<Footer />
+				</div>
+			</body>
+		</html>
+	);
 }

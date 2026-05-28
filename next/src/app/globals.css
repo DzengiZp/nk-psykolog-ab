@@ -1,32 +1,34 @@
 :root {
-  /* Color palettes for whole website */
-  --color-palette-one: #f9f8f6;
-  --color-palette-two: #efe9e3;
-  --color-palette-three: #d9cfc7;
-  --color-palette-four: #c9b59c;
+	/* Color palettes for whole website */
+	--color-palette-one: #f9f8f6;
+	--color-palette-two: #efe9e3;
+	--color-palette-three: #d9cfc7;
+	--color-palette-four: #c9b59c;
 
-  /* Text colors */
-  --text-black: #303030;
-
-  /* Rem size */
+	/* Text colors */
+	--text-black: #303030;
 }
 
 html {
-  font-size: 62.5%;
+	/* Default rem size */
+	font-size: 62.5%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  box-sizing: content-box;
-  min-height: 100vh;
-  background-color: var(--color-palette-two);
+@media (min-width: 680px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		box-sizing: content-box;
+		background-color: var(--color-palette-two);
+		margin: 0;
+		padding: 0;
+	}
 }
 
-* {
-  box-sizing: border-box;
+.baseSite {
+	margin: 0 auto;
+	width: 60vw;
+	background-color: var(--color-palette-one);
 }
 
 h1,
@@ -37,6 +39,6 @@ h5,
 h6,
 p,
 span {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
