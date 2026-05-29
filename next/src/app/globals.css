@@ -20,6 +20,10 @@
 	box-sizing: content-box;
 }
 
+button {
+  cursor: pointer;
+}
+
 html {
 	/* Default rem size */
 	font-size: 62.5%;
