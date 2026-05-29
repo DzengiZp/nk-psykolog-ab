@@ -1,0 +1,15 @@
+.heroImageSectionContainer {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	/* aspect-ratio: 2.5/1; */
+  height: 500px;
+  aspect-ratio: auto;
+	margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+
+.heroImage {
+	object-fit: cover;
+  border-radius: 4px;
+}
