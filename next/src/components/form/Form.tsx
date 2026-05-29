@@ -70,6 +70,7 @@ export default function Form() {
 					<textarea
 						className={styles.messageInput}
 						placeholder='Skriv ett meddelande här..'
+            rows={10}
 					/>
 				</div>
 				<div className={styles.buttonContainer}>

@@ -1,11 +1,8 @@
 .footerContainer {
-    background-color: var(--color-palette-four);
+    background-color: var(--color-palette-three);
+    color: var(--text-black);
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
     padding: 20px;
     margin-top: auto;
-}
-
-.copyrightNotice {
-    
 }

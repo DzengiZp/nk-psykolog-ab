@@ -12,14 +12,17 @@ const linkButtons = [
 export default function Header() {
 	return (
 		<header className={styles.headerContainer}>
-			<Link href={"/"}>
-				<Image
-					src={'/logo.svg'}
-					alt={''}
-					width={569}
-					height={40}
-				/>
-			</Link>
+			<div className={styles.headerImageContainer}>
+				<Link href='/'>
+					<Image
+						src={'/logo.svg'}
+						alt={'Navbar logo'}
+						width={350}
+						height={20}
+            style={{ width: '100%', height: 'auto' }}
+					/>
+				</Link>
+			</div>
 			<div className={styles.headerButtonsContainer}>
 				{linkButtons.map(link => (
 					<Link
