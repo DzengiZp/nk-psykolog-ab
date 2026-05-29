@@ -1,11 +1,41 @@
 'use client';
 
-import React from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styles from './form.module.css';
 
+type FormInputInformation = {
+	firstName: string;
+	lastName: string;
+	emailAddress: string;
+	message: string;
+};
+
 export default function Form() {
+	const [formInformation, setFormInformation] = useState<FormInputInformation>({
+		firstName: '',
+		lastName: '',
+		emailAddress: '',
+		message: '',
+	});
+
+	function handleFormInformation(event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) {
+		const { name, value } = event.target;
+
+		setFormInformation(previous => ({
+			...previous,
+			[name]: value,
+		}));
+	}
+
 	function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
 		event.preventDefault();
+
+		setFormInformation({
+			firstName: '',
+			lastName: '',
+			emailAddress: '',
+			message: '',
+		});
 	}
 
 	return (
@@ -34,6 +64,10 @@ export default function Form() {
 					<input
 						className={styles.firstNameInput}
 						type='text'
+						name='firstName'
+						id='firstName'
+						value={formInformation.firstName}
+						onChange={handleFormInformation}
 						placeholder='Förnamn'
 					/>
 				</div>
@@ -46,6 +80,10 @@ export default function Form() {
 					<input
 						className={styles.lastNameInput}
 						type='text'
+						name='lastName'
+						id='lastName'
+						value={formInformation.lastName}
+						onChange={handleFormInformation}
 						placeholder='Efternamn'
 					/>
 				</div>
@@ -58,7 +96,11 @@ export default function Form() {
 					<input
 						className={styles.emailInput}
 						type='text'
-						placeholder='Mail adress'
+						name='emailAddress'
+						id='emailAddress'
+						value={formInformation.emailAddress}
+						onChange={handleFormInformation}
+						placeholder='E-post adress'
 					/>
 				</div>
 				<div className={styles.messageWrapper}>
@@ -69,8 +111,11 @@ export default function Form() {
 					</label>
 					<textarea
 						className={styles.messageInput}
+						name='message'
+						id='message'
+						value={formInformation.message}
+						onChange={handleFormInformation}
 						placeholder='Skriv ett meddelande här..'
-            rows={10}
 					/>
 				</div>
 				<div className={styles.buttonContainer}>

@@ -54,5 +54,4 @@
 .formSectionContainer {
 	color: var(--text-black);
 	gap: 2rem;
-	font-size: clamp(1.8rem, 1vw + 1rem, 2.6rem);
 }
