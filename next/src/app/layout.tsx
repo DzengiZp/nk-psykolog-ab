@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html
-			lang='en'
+			lang='sv'
 			className={quicksand.className}>
 			<body>
 				<div className='baseSite'>
