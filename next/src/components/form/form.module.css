@@ -56,11 +56,15 @@
 
 .formParagraph {
 	margin-bottom: 5rem;
-	overflow-wrap: break-word;
 }
 
 .mailAddress {
-	text-underline-offset: 6px;
+	text-underline-offset: 3px;
+}
+
+.mailAddress {
+	text-underline-offset: 3px;
+	word-break: break-word;
 }
 
 .firstNameWrapper {
@@ -84,7 +88,6 @@
 .emailWrapper {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 1rem;
 }
 
 .emailInput {
@@ -108,11 +111,6 @@
 	resize: none;
   padding: 0.5rem;
   font-size: clamp(1.6rem, 1vw + 1rem, 2.6rem);
-}
-
-.messageInput::placeholder {
-	/* font-size: clamp(1.6rem, 1vw + 1rem, 2.6rem); */
-
 }
 
 @media (min-width: 1024px) {

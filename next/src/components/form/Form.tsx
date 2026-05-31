@@ -18,6 +18,45 @@ export default function Form() {
 		message: '',
 	});
 
+	const inputFields = [
+		{
+			wrapperClassName: styles.firstNameWrapper,
+			labelClassName: styles.firstNameLabel,
+			labelText: 'Förnamn',
+			className: styles.firstNameInput,
+			type: 'text',
+			name: 'firstName',
+			id: 'firstName',
+			value: formInformation.firstName,
+			onChange: handleFormInformation,
+			placeholder: 'Förnamn',
+		},
+		{
+			wrapperClassName: styles.lastNameWrapper,
+			labelClassName: styles.lastNameLabel,
+			labelText: 'Efternamn',
+			className: styles.lastNameInput,
+			type: 'text',
+			name: 'lastName',
+			id: 'lastName',
+			value: formInformation.lastName,
+			onChange: handleFormInformation,
+			placeholder: 'Efternamn',
+		},
+		{
+			wrapperClassName: styles.emailWrapper,
+			labelClassName: styles.emailLabel,
+			labelText: 'Mail adress',
+			className: styles.emailInput,
+			type: 'text',
+			name: 'emailAddress',
+			id: 'emailAddress',
+			value: formInformation.emailAddress,
+			onChange: handleFormInformation,
+			placeholder: 'E-post adress',
+		},
+	];
+
 	function handleFormInformation(event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) {
 		const { name, value } = event.target;
 
@@ -55,54 +94,15 @@ export default function Form() {
 					Om du skulle vilja boka ett första samtal vänligen fyll i intresseanmälan nedan. För att värna om sekretessen, beskriv ditt ärende
 					kortfattat och utelämna personliga detaljer och känslig information.
 				</p>
-				<div className={styles.firstNameWrapper}>
-					<label
-						className={styles.firstNameLabel}
-						htmlFor=''>
-						Förnamn:{' '}
-					</label>
-					<input
-						className={styles.firstNameInput}
-						type='text'
-						name='firstName'
-						id='firstName'
-						value={formInformation.firstName}
-						onChange={handleFormInformation}
-						placeholder='Förnamn'
-					/>
-				</div>
-				<div className={styles.lastNameWrapper}>
-					<label
-						className={styles.lastNameLabel}
-						htmlFor=''>
-						Efternamn:{' '}
-					</label>
-					<input
-						className={styles.lastNameInput}
-						type='text'
-						name='lastName'
-						id='lastName'
-						value={formInformation.lastName}
-						onChange={handleFormInformation}
-						placeholder='Efternamn'
-					/>
-				</div>
-				<div className={styles.emailWrapper}>
-					<label
-						className={styles.emailLabel}
-						htmlFor=''>
-						Mail adress:
-					</label>
-					<input
-						className={styles.emailInput}
-						type='text'
-						name='emailAddress'
-						id='emailAddress'
-						value={formInformation.emailAddress}
-						onChange={handleFormInformation}
-						placeholder='E-post adress'
-					/>
-				</div>
+				{inputFields.map(({ wrapperClassName, labelClassName, labelText, ...inputProps }) => (
+					<div key={inputProps.id} className={wrapperClassName}>
+						<label className={labelClassName} htmlFor={inputProps.id}>
+							{labelText}
+						</label>
+						<input {...inputProps} />
+					</div>
+				))}
+
 				<div className={styles.messageWrapper}>
 					<label
 						className={styles.messageLabel}
